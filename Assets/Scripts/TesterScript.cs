@@ -5,7 +5,7 @@ using UnityEngine;
 public class TesterScript : MonoBehaviour
 {
     public GameManager GameManager;
-    public Player player1, player2;
+    public Player player1, player2, store;
 
     //public int NumberOfFullTurnsToTest, cardIndexToTryToPlay, TestManaAvailable;
 
@@ -13,12 +13,6 @@ public class TesterScript : MonoBehaviour
       //Debug.Log("Attempting to set up the Library");
 
       GameManager.startGame();
-
-      player1.playCard(0);
-      player1.passTurn();
-
-      player2.playCard(0);
-      player2.passTurn();
 
     }
 

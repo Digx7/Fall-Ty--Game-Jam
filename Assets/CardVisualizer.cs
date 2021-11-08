@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 
 public class CardVisualizer : MonoBehaviour
 {
@@ -9,12 +11,36 @@ public class CardVisualizer : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI nameText, costText, effectsText, flavorText;
+    //public GameObject cardButtonOBJ;
+    public Button cardButton;
+
+    public SpriteRenderer cardImageRender;
+
+    public Player ownerOfCard;
+    [SerializeField]
+    private Canvas cardCanvas;
+
+    [SerializeField]
+    private Camera gameCamera;
+
+    public void Start(){
+       gameCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+       //cardButton = cardButtonOBJ.GetComponent<Button>();
+       cardCanvas.worldCamera = gameCamera;
+
+       //cardButton.onClick.AddListener(() => testAction());
+    }
+
+    public void setOwner(Player owner){
+      ownerOfCard = owner;
+    }
 
     public void changeCard(CardScriptableObject _card){
       card = _card;
       nameText.text = card.CardName;
       costText.text = card.CardCost.ToString();
       flavorText.text = card.flavorText;
+      cardImageRender.sprite = card.cardImage;
       /*if(card is PerminateScriptableObject){
         effectsText.text = (PerminateScriptableObject)card.perminateText;
       }
@@ -24,5 +50,17 @@ public class CardVisualizer : MonoBehaviour
       else if(card is EffectsScriptableObject){
         effectsText.text = (EffectsScriptableObject)card.effectText;
       }*/
+    }
+
+    public void setCardClickable(bool input){
+      cardButton.interactable = input;
+    }
+
+    public void onCardClicked(){
+      ownerOfCard.playCard(card);
+    }
+
+    private void testAction(){
+      Debug.Log("This Card Was clicked");
     }
 }

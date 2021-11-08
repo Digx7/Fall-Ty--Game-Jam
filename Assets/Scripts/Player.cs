@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     public Hand playerHand;
     public int handSize;
     public Feild playerFeild;
-    public UnityEvent turnEnd;
+    public UnityEvent cardPlayed,turnStart,turnEnd;
+    public IntEvent manaChanged,ultChanged;
     //public Deck tempFeild;
 
     public void setUpLibrary(){
@@ -32,15 +33,23 @@ public class Player : MonoBehaviour
       library.shuffleDeck();
     }
 
-    public void DrawForTurn(){
+    public virtual void Draw(){
       for(int i = 0; i < handSize; i++){
         if (library.isDeckEmpty()){ shuffleDiscardPileBackIn();}
-        playerHand.addCardToHand(library.takeCardOffTop());
+        //playerHand.addCardToHand(library.takeCardOffTop(),playCard(i))
+        playerHand.addCardToHand(library.takeCardOffTop(), this);
       }
+      //updateCardButtons();
     }
 
     public void RefillMana(){
       manaCurrent = manaMax;
+      manaChanged.Invoke(manaCurrent);
+    }
+
+    public void emptyMana(){
+      manaCurrent = 0;
+      manaChanged.Invoke(manaCurrent);
     }
 
     public void DiscardAtTurnEnd(){
@@ -50,15 +59,39 @@ public class Player : MonoBehaviour
       }
     }
 
-    public void playCard(int index){
+    public virtual void playCard(int index){
+      Debug.Log("Attempting to play a card at index: " + index);
+
       CardScriptableObject cardBeingPlayed = playerHand.playCard(index, manaCurrent);
       manaCurrent = manaCurrent - cardBeingPlayed.CardCost;
+      manaChanged.Invoke(manaCurrent);
 
+      Debug.Log("Adding the card to the feild");
       playerFeild.addCardToFeild(cardBeingPlayed);
+
+      Debug.Log("Updateing the card buttons after being played");
+    }
+
+    public void playCard(CardScriptableObject card){
+      if(playerHand.isCardInHand(card)){
+        playCard(playerHand.findIndexOfCardInHand(card));
+      }
+    }
+
+    public void BuyCard(CardScriptableObject card){
+      library.AddCardToBottom(card);
+    }
+
+    public void UpgradeUlt(int input){
+      ultCurrent += input;
+      ultChanged.Invoke(ultCurrent);
     }
 
     public void passTurn(){
+      emptyMana();
       DiscardAtTurnEnd();
+      playerFeild.checkAllCardsForTriggerType(TriggerType.EndStep);
+      playerFeild.proccessStack();
       turnEnd.Invoke();
     }
 }

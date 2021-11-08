@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardDisplayer : MonoBehaviour
 {
   public List<GameObject> cardVisuals;
+  public List<CardVisualizer> cardVisualizers;
 
   [SerializeField]
   private GameObject cardBasePreFab;
@@ -18,8 +19,26 @@ public class CardDisplayer : MonoBehaviour
   public void addCardToBeDisplayed(CardScriptableObject card){
     GameObject cardOBJ = Instantiate(cardBasePreFab, this.transform);
     CardVisualizer visuals = cardOBJ.GetComponent<CardVisualizer>();
-    visuals.changeCard(card);
+
     cardVisuals.Add(cardOBJ);
+
+    visuals.changeCard(card);
+    visuals.setCardClickable(false);
+    cardVisualizers.Add(visuals);
+
+    arrageDisplayCards();
+  }
+
+  public void addCardToBeDisplayed(CardScriptableObject card, Player owner){
+    GameObject cardOBJ = Instantiate(cardBasePreFab, this.transform);
+    CardVisualizer visuals = cardOBJ.GetComponent<CardVisualizer>();
+
+    cardVisuals.Add(cardOBJ);
+
+    visuals.changeCard(card);
+    visuals.setOwner(owner);
+    cardVisualizers.Add(visuals);
+
     arrageDisplayCards();
   }
 
@@ -33,6 +52,7 @@ public class CardDisplayer : MonoBehaviour
   public void removeCardFromBeingDisplayed(int index){
     Destroy(cardVisuals[index]);
     cardVisuals.RemoveAt(index);
+    cardVisualizers.RemoveAt(index);
   }
 
   public void removeALLCardsFromBeingDisplayed(){
@@ -40,5 +60,6 @@ public class CardDisplayer : MonoBehaviour
       Destroy(cardVisuals[i]);
     }
     cardVisuals.Clear();
+    cardVisualizers.Clear();
   }
 }
