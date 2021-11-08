@@ -434,12 +434,21 @@ MonoBehaviour:
   manaCurrent: 500
   ultMax: 10
   ultCurrent: 0
+  currentLife: 3
+  maxLife: 3
+  shopMod: 0
+  playersChampion: {fileID: 11400000, guid: 70edcd5582a74504b8300bfe5a033ee1, type: 2}
   startingDeck:
-  - {fileID: 11400000, guid: 438f03e7db5999349898698fd6f4f873, type: 2}
+  - {fileID: 11400000, guid: 7722b36f97d03104bbabbb7d7f51c7e4, type: 2}
+  - {fileID: 11400000, guid: e9160888eaec76c448fb964d5cb4c974, type: 2}
   - {fileID: 11400000, guid: e9160888eaec76c448fb964d5cb4c974, type: 2}
   - {fileID: 11400000, guid: d838889929ea1b140992d8d4ef8480aa, type: 2}
+  - {fileID: 11400000, guid: d838889929ea1b140992d8d4ef8480aa, type: 2}
+  - {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
+  - {fileID: 11400000, guid: 063c83da929828f4aa6349033d93ceef, type: 2}
+  - {fileID: 11400000, guid: 2d894fa5e5efd474fad968b7d88e4e6a, type: 2}
   playerHand: {fileID: 8138790095621670851}
-  handSize: 2
+  handSize: 4
   playerFeild: {fileID: 6343365499895018092}
   cardPlayed:
     m_PersistentCalls:
@@ -462,10 +471,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerDied:
+    m_PersistentCalls:
+      m_Calls: []
   manaChanged:
     m_PersistentCalls:
       m_Calls: []
   ultChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  shopModChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6343365500656787344
@@ -557,9 +575,9 @@ MonoBehaviour:
   cardVisuals: []
   cardVisualizers: []
   cardBasePreFab: {fileID: 7005581836366362735, guid: f884fe5c5f2abe641a1878656226bbd0, type: 3}
-  cardDisplayStartingPoint: {x: -3, y: -1, z: 0}
+  cardDisplayStartingPoint: {x: -5, y: -3, z: 0}
   cardDisplayOffset: {x: 1, y: 0, z: 0}
-  cardDisplayScale: {x: 0.25, y: 0.25, z: 0.25}
+  cardDisplayScale: {x: 0.125, y: 0.125, z: 0.125}
 --- !u!1 &8669806772038690480
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,9 +639,9 @@ MonoBehaviour:
   cardVisuals: []
   cardVisualizers: []
   cardBasePreFab: {fileID: 7005581836366362735, guid: f884fe5c5f2abe641a1878656226bbd0, type: 3}
-  cardDisplayStartingPoint: {x: -3, y: -2, z: 0}
+  cardDisplayStartingPoint: {x: -3, y: -3.5, z: 0}
   cardDisplayOffset: {x: 2, y: 0, z: -1}
-  cardDisplayScale: {x: 0.5, y: 0.5, z: 0.5}
+  cardDisplayScale: {x: 0.375, y: 0.375, z: 0.375}
 --- !u!1 &9190099576010980272
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +688,6 @@ MonoBehaviour:
   cardVisuals: []
   cardVisualizers: []
   cardBasePreFab: {fileID: 7005581836366362735, guid: f884fe5c5f2abe641a1878656226bbd0, type: 3}
-  cardDisplayStartingPoint: {x: 0, y: -1, z: 0}
+  cardDisplayStartingPoint: {x: 1, y: -1, z: 0}
   cardDisplayOffset: {x: 0, y: 0, z: 0}
-  cardDisplayScale: {x: 0.5, y: 0.5, z: 0.5}
+  cardDisplayScale: {x: 0.25, y: 0.25, z: 0.25}

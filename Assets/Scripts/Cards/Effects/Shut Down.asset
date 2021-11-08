@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 2
   flavorText: Stopping all progress
   cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 0
     property: {fileID: 11400000, guid: f2ad48f2c1631f842875587b2334753a, type: 2}

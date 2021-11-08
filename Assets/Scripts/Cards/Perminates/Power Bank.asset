@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 4
   flavorText: Save em for later
   cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 1
     property: {fileID: 11400000, guid: 7a0c9b531d1ce69488bff68f07d46de5, type: 2}

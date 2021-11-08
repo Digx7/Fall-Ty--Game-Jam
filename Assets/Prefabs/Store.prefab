@@ -61,8 +61,8 @@ MonoBehaviour:
   cardVisuals: []
   cardVisualizers: []
   cardBasePreFab: {fileID: 7005581836366362735, guid: f884fe5c5f2abe641a1878656226bbd0, type: 3}
-  cardDisplayStartingPoint: {x: -4, y: 0, z: 0}
-  cardDisplayOffset: {x: 1, y: 0, z: 0}
+  cardDisplayStartingPoint: {x: 3, y: 0, z: 0}
+  cardDisplayOffset: {x: 1.5, y: 0, z: 0}
   cardDisplayScale: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!1 &8422855660743877221
 GameObject:
@@ -158,13 +158,16 @@ MonoBehaviour:
   manaCurrent: 0
   ultMax: 0
   ultCurrent: 0
+  currentLife: 0
+  maxLife: 0
+  playersChampion: {fileID: 0}
   startingDeck:
   - {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
   - {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
   - {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
   - {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
   playerHand: {fileID: 8422855659647705128}
-  handSize: 4
+  handSize: 2
   playerFeild: {fileID: 0}
   cardPlayed:
     m_PersistentCalls:
@@ -175,10 +178,16 @@ MonoBehaviour:
   turnEnd:
     m_PersistentCalls:
       m_Calls: []
+  playerDied:
+    m_PersistentCalls:
+      m_Calls: []
   manaChanged:
     m_PersistentCalls:
       m_Calls: []
   ultChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
     m_PersistentCalls:
       m_Calls: []
   activePlayer: {fileID: 0}

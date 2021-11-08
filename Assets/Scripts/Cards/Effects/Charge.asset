@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 1
   flavorText: A small shock
   cardImage: {fileID: 21300000, guid: 97cc60e2aca5a414c8c73dc34ad421d2, type: 3}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 0
     property: {fileID: 11400000, guid: 7a0c9b531d1ce69488bff68f07d46de5, type: 2}

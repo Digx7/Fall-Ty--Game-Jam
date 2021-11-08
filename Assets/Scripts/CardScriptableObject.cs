@@ -12,7 +12,7 @@ public class CardScriptableObject : ScriptableObject
 
   public string flavorText;
 
-  public Sprite cardImage;
+  public Sprite cardImage, cardBoarder;
 
   public void printCard(){
     Debug.Log(CardName + " costs " + CardCost + " to play\n" + flavorText);

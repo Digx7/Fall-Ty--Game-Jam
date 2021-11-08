@@ -15,7 +15,8 @@ MonoBehaviour:
   CardName: Overload
   CardCost: 3
   flavorText: Will wake you up
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: af63e6a1a227cb74badf36af4ffa159d, type: 3}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 0
     property: {fileID: 11400000, guid: 79e3f345c451102489f548522f22ab7a, type: 2}

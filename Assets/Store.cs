@@ -16,8 +16,12 @@ public class Store : Player
     public override void playCard(int index){
       Debug.Log("Attempting to play a card at index: " + index);
 
-      CardScriptableObject cardBeingBought = playerHand.playCard(index, activePlayer.manaCurrent);
-      activePlayer.manaCurrent = activePlayer.manaCurrent - cardBeingBought.CardCost;
+      int priceCanPay = activePlayer.manaCurrent + activePlayer.shopMod;
+
+      CardScriptableObject cardBeingBought = playerHand.playCard(index, priceCanPay);
+
+      int cardPrice = cardBeingBought.CardCost - activePlayer.shopMod;
+      activePlayer.manaCurrent = activePlayer.manaCurrent - cardPrice;
       activePlayer.manaChanged.Invoke(activePlayer.manaCurrent);
 
       Debug.Log("Adding the card to the player's deck");

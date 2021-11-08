@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 5
   flavorText: All the Power
   cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 1
     property: {fileID: 11400000, guid: b82cce6b4e4b40d479186031fbefbda1, type: 2}

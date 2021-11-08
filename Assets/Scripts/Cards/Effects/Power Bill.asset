@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62837152765c23247b858a11c5a118a6, type: 3}
+  m_Name: Power Bill
+  m_EditorClassIdentifier: 
+  CardName: Power Bill
+  CardCost: 3
+  flavorText: 
+  cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
+  triggers:
+  - type: 0
+    property: {fileID: 11400000, guid: 414ed3dd0ad468f43be074e8df808c86, type: 2}
