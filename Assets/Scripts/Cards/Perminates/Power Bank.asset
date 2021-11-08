@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41a4ba85d1785f4dba9d5e2c1de757f, type: 3}
+  m_Name: Power Bank
+  m_EditorClassIdentifier: 
+  CardName: Power Bank
+  CardCost: 4
+  flavorText: Save em for later
+  cardImage: {fileID: 0}
+  triggers:
+  - type: 1
+    property: {fileID: 11400000, guid: 7a0c9b531d1ce69488bff68f07d46de5, type: 2}
