@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41a4ba85d1785f4dba9d5e2c1de757f, type: 3}
+  m_Name: Power Station
+  m_EditorClassIdentifier: 
+  CardName: Power Station
+  CardCost: 5
+  flavorText: All the Power
+  cardImage: {fileID: 0}
+  triggers:
+  - type: 1
+    property: {fileID: 11400000, guid: b82cce6b4e4b40d479186031fbefbda1, type: 2}

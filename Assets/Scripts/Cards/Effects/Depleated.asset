@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62837152765c23247b858a11c5a118a6, type: 3}
+  m_Name: Depleated
+  m_EditorClassIdentifier: 
+  CardName: Depleated
+  CardCost: 1
+  flavorText: A small set back
+  cardImage: {fileID: 0}
+  triggers:
+  - type: 0
+    property: {fileID: 11400000, guid: eb237b6ef7de35c4d85da65246b0edd9, type: 2}
