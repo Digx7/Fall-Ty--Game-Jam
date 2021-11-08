@@ -1821,10 +1821,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6343365500548955644, guid: 361c6004a6ea5d54b9b0515681c27be9, type: 3}
-      propertyPath: startingDeck.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7722b36f97d03104bbabbb7d7f51c7e4, type: 2}
-    - target: {fileID: 6343365500548955644, guid: 361c6004a6ea5d54b9b0515681c27be9, type: 3}
       propertyPath: ultChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1852,6 +1848,10 @@ PrefabInstance:
       propertyPath: manaChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 254412081}
+    - target: {fileID: 6343365500548955644, guid: 361c6004a6ea5d54b9b0515681c27be9, type: 3}
+      propertyPath: turnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: nextTurn
+      objectReference: {fileID: 0}
     - target: {fileID: 6343365500548955644, guid: 361c6004a6ea5d54b9b0515681c27be9, type: 3}
       propertyPath: ultChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
