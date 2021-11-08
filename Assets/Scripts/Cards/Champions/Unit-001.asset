@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a01ec75ff77ef458ca067d2ff2fa36, type: 3}
+  m_Name: Unit-001
+  m_EditorClassIdentifier: 
+  CardName: 
+  CardCost: 0
+  flavorText: 
+  cardImage: {fileID: 21300000, guid: f34713a1d72178943bc555e264c1de01, type: 3}
+  cardBoarder: {fileID: 0}
+  triggers:
+  - type: 3
+    property: {fileID: 11400000, guid: 2bdd887de612de2469ee38df4f195976, type: 2}
+  - type: 3
+    property: {fileID: 11400000, guid: 79e3f345c451102489f548522f22ab7a, type: 2}

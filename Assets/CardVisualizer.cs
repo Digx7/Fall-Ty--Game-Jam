@@ -14,7 +14,7 @@ public class CardVisualizer : MonoBehaviour
     //public GameObject cardButtonOBJ;
     public Button cardButton;
 
-    public SpriteRenderer cardImageRender;
+    public SpriteRenderer cardImageRenderer, cardBoarderRenderer;
 
     public Player ownerOfCard;
     [SerializeField]
@@ -40,7 +40,8 @@ public class CardVisualizer : MonoBehaviour
       nameText.text = card.CardName;
       costText.text = card.CardCost.ToString();
       flavorText.text = card.flavorText;
-      cardImageRender.sprite = card.cardImage;
+      cardImageRenderer.sprite = card.cardImage;
+      cardBoarderRenderer.sprite = card.cardBoarder;
       /*if(card is PerminateScriptableObject){
         effectsText.text = (PerminateScriptableObject)card.perminateText;
       }

@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 0.3047704, b: 0.035294116, a: 0.33333334}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -452,7 +452,8 @@ MonoBehaviour:
   effectsText: {fileID: 7945999356020198609}
   flavorText: {fileID: 5192162756238683895}
   cardButton: {fileID: 5155977348038389507}
-  cardImageRender: {fileID: 7005581836842952128}
+  cardImageRenderer: {fileID: 7005581836842952128}
+  cardBoarderRenderer: {fileID: 7005581837794378759}
   ownerOfCard: {fileID: 0}
   cardCanvas: {fileID: 1254926569320391359}
   gameCamera: {fileID: 0}

@@ -12,6 +12,7 @@ public class Feild : MonoBehaviour
 
     public CardDisplayer perminantsDispayer, championsDisplayer, effectsDisplayer;
 
+
     private Stack<Property> propertiesTriggering;
 
     [SerializeField]
@@ -26,7 +27,7 @@ public class Feild : MonoBehaviour
     private Player findOpponent(){
       Player[] players = GameObject.FindObjectsOfType<Player>();
       for(int i = 0; i<players.Length; i++){
-        if(players[i].name != "Store" && players[i].GetComponent<Player>() != caster) return players[i].GetComponent<Player>();
+        if(players[i].name != "StoreRight" && players[i].name != "StoreLeft" && players[i].GetComponent<Player>() != caster) return players[i].GetComponent<Player>();
       }
       return null;
     }
@@ -105,6 +106,7 @@ public class Feild : MonoBehaviour
       while(propertiesTriggering.Count != 0){
         Property prop = propertiesTriggering.Pop();
         prop.triggerProperty();
+        Debug.Log("A property was triggered");
       }
       removeAllEffectsFromFeild();
     }

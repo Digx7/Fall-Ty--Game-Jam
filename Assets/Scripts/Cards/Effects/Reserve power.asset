@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 5
   flavorText: All your power below to us
   cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 0
     property: {fileID: 11400000, guid: e9342dee691f6264d9b51b5e8323b907, type: 2}

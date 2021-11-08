@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicalCard: {fileID: 1509088667}
-  cardData: {fileID: 11400000, guid: 56f61bef9a3395b4ebdf8bfdbe9e5667, type: 2}
+  cardData: {fileID: 11400000, guid: 2239e9131b92f7a4fbe17591e4dba325, type: 2}
 --- !u!4 &1122374588
 Transform:
   m_ObjectHideFlags: 0

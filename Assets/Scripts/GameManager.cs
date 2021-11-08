@@ -5,15 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Player player1, player2;
-    public Store store;
+    public Store storeR, storeL;
 
     public Player playerGoingFirst;
 
     public void startGame(){
       player1.setUpLibrary();
       player2.setUpLibrary();
-      store.setUpLibrary();
-      store.Draw();
+      storeR.setUpLibrary();
+      storeL.setUpLibrary();
+      storeR.Draw();
+      storeL.Draw();
+      player1.castChampion();
+      player2.castChampion();
 
       nextTurn(playerGoingFirst);
     }
@@ -21,8 +25,11 @@ public class GameManager : MonoBehaviour
     public void nextTurn(Player activePlayer){
       activePlayer.Draw();
       activePlayer.RefillMana();
-      store.SetActivePlayer(activePlayer);
+      storeR.SetActivePlayer(activePlayer);
+      storeL.SetActivePlayer(activePlayer);
     }
 
-    public void finishGame(){}
+    public void finishGame(){
+      Debug.Log("Game Finished");
+    }
 }

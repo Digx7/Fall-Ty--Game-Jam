@@ -16,6 +16,7 @@ MonoBehaviour:
   CardCost: 3
   flavorText: Lights out
   cardImage: {fileID: 0}
+  cardBoarder: {fileID: 21300000, guid: 9aea99c2ee80c6240ac469440bb9caef, type: 3}
   triggers:
   - type: 0
     property: {fileID: 11400000, guid: 5b19555b7d93f2e4bb695eca04d8b1c0, type: 2}

@@ -9,6 +9,10 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI p2Mana;
     public TextMeshProUGUI p1Ult;
     public TextMeshProUGUI p2Ult;
+    public TextMeshProUGUI p1Health;
+    public TextMeshProUGUI p2Health;
+    public TextMeshProUGUI p1Shop;
+    public TextMeshProUGUI p2Shop;
 
     public void UpdateP1Mana(int input){
       p1Mana.text = input.ToString();
@@ -24,5 +28,21 @@ public class GameUI : MonoBehaviour
 
     public void UpdateP2Ult(int input){
       p2Ult.text = input.ToString();
+    }
+
+    public void UpdateP1Health(int input){
+      p1Health.text = input.ToString();
+    }
+
+    public void UpdateP2Health(int input){
+      p2Health.text = input.ToString();
+    }
+
+    public void UpdateP1Shop(int input){
+      p1Shop.text = input.ToString();
+    }
+
+    public void UpdateP2Shop(int input){
+      p2Shop.text = input.ToString();
     }
 }
