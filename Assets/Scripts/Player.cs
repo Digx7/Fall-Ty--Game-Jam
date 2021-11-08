@@ -34,12 +34,16 @@ public class Player : MonoBehaviour
     }
 
     public virtual void Draw(){
-      for(int i = 0; i < handSize; i++){
+      DrawCards(handSize);
+      //updateCardButtons();
+    }
+
+    public void DrawCards(int numberOfCardsToDraw){
+      for(int i = 0; i < numberOfCardsToDraw; i++){
         if (library.isDeckEmpty()){ shuffleDiscardPileBackIn();}
         //playerHand.addCardToHand(library.takeCardOffTop(),playCard(i))
         playerHand.addCardToHand(library.takeCardOffTop(), this);
       }
-      //updateCardButtons();
     }
 
     public void RefillMana(){
@@ -85,6 +89,10 @@ public class Player : MonoBehaviour
     public void UpgradeUlt(int input){
       ultCurrent += input;
       ultChanged.Invoke(ultCurrent);
+    }
+
+    public void UpdateManaMax(int input){
+      manaMax += input;
     }
 
     public void passTurn(){
