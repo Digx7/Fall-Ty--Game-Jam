@@ -435,7 +435,7 @@ MonoBehaviour:
   ultMax: 10
   ultCurrent: 0
   startingDeck:
-  - {fileID: 11400000, guid: e9160888eaec76c448fb964d5cb4c974, type: 2}
+  - {fileID: 11400000, guid: 7722b36f97d03104bbabbb7d7f51c7e4, type: 2}
   playerHand: {fileID: 8138790095621670851}
   handSize: 2
   playerFeild: {fileID: 6343365499895018092}
